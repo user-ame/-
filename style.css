@@ -275,14 +275,3 @@ body:not(.no-transitions) .gallery-section {
   color: #ccc;
   padding: 1rem;
 }
-
-/* === Mirror Effect for Reversed Text === */
-.mirror-effect {
-  color: #00ffcc;
-  font-family: monospace;
-  white-space: pre-wrap;
-  line-height: 1.6;
-  text-align: left;
-  direction: rtl;
-  unicode-bidi: bidi-override;
-}
