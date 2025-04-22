@@ -62,13 +62,15 @@ in their eyes.
   <!-- === Section: Logos === -->
   <section class="gallery-section">
     <h2 class="glitch">2. Logos</h2>
+<div><p class="glitch gallery-desc">Branded Consumer of Brand.</p>
+    </div>
+    
     <div class="gallery-grid">
       <img src="Images/Lg/Lg1.jpg" class="glitch-img" alt="Logo 1" />
       <img src="Images/Lg/Lg2.jpg" class="glitch-img" alt="Logo 2" />
       <img src="Images/Lg/Lg3.jpg" class="glitch-img" alt="Logo 3" />
       <img src="Images/Lg/Lg4.jpg" class="glitch-img" alt="Logo 4" />
     </div>
-    <p class="gallery-desc">Branded Consumer of Brand.</p>
   </section>
 
   <div class="ascii-line" id="divider2"></div>
@@ -91,6 +93,10 @@ in their eyes.
   <!-- === Section: Name Studies === -->
   <section class="gallery-section">
     <h2 class="glitch">4. Alphabet</h2>
+
+    <div><p class="glitch gallery-desc">0bjects of Em3rgent Narc1ssism.</p>
+    </div>
+    
     <div class="nm-grid">
       <img src="Images/Nm/S-1.jpg" class="glitch-img small-img" alt="S-1" />
       <img src="Images/Nm/I-1.jpg" class="glitch-img small-img" alt="I-1" />
@@ -102,7 +108,6 @@ in their eyes.
     <div class="gallery-grid">
       <img src="Images/Nm/Nm1.jpg" class="glitch-img" alt="Nm1" />
     </div>
-    <p class="gallery-desc">Objects of Emergent Narcissism.</p>
   </section>
 
   <div class="ascii-line" id="divider4"></div>
@@ -110,10 +115,13 @@ in their eyes.
   <!-- === Section: Final Manifest === -->
   <section class="gallery-section">
     <h2 class="glitch">5. Collage</h2>
+<div><p class="glitch gallery-desc">A Singular Expression of Erratic Self-Delusion.</p>
+    </div>
+
+    
     <div class="gallery-grid">
       <img src="Images/Sp/SP.jpg" class="glitch-img" alt="Final Style" />
     </div>
-    <p class="gallery-desc">A Singular Expression of Erratic Self-Delusion.</p>
   </section>
 
 <!-- === AUDIO PLAYER === -->
@@ -176,10 +184,10 @@ in their eyes.
       btn.addEventListener("click", () => {
         if (audio.paused) {
           audio.play();
-          btn.textContent = "Mute";
+          btn.textContent = "DRINK ME";
         } else {
           audio.pause();
-          btn.textContent = "Play";
+          btn.textContent = "EAT ME";
         }
       });
     } else {
@@ -192,7 +200,7 @@ in their eyes.
       document.querySelectorAll(".glitch-img").forEach(img => {
         img.addEventListener("click", () => {
           img.classList.toggle("enlarged");
-          alert("Stop Poking Me!");
+          alert("STOP POKING ME!");
         });
       });
     }
