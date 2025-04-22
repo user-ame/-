@@ -274,3 +274,29 @@ body:not(.no-transitions) .gallery-section {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
   }
 }
+
+/* === DIGITAL REFLECTION STYLE === */
+.reflection-container {
+  margin-top: 2rem;
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reflection-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  padding: 1rem;
+}
+
+.reflection-mirror {
+  transform: scaleY(-1);
+  opacity: 0.3;
+  filter: blur(1px);
+  margin-top: -1rem;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+}
