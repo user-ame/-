@@ -279,8 +279,8 @@ body:not(.no-transitions) .gallery-section {
 /* === Mirror Effect for Reversed Text === */
 .mirror-effect {
   color: #00ffcc;
-  background: #000;
-  font-size: 1.1rem;
+  font-family: monospace;
+  white-space: pre-wrap;
   line-height: 1.6;
   text-align: left;
   direction: rtl;
