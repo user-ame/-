@@ -301,8 +301,10 @@ body:not(.no-transitions) .gallery-section {
   pointer-events: none;
 }
 
-/* === TEMP: Force all gallery sections visible === */
-.gallery-section {
+#digital-reflection {
+  display: block !important;
   opacity: 1 !important;
   transform: none !important;
+  color: #ccc !important;
+  font-size: 1.1rem !important;
 }
