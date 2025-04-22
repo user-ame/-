@@ -1,0 +1,288 @@
+/* === Base Styling === */
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: #00ffcc;
+  font-family: 'Lucida Console', Monaco, monospace;
+  overflow-x: hidden;
+  cursor: url('https://www.w3schools.com/css/cursor.cur'), auto;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  color: #cc33cc;
+}
+
+h2 {
+  color: #66ccff;
+}
+
+/* === Loading Screen === */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #66ffff;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  z-index: 9999;
+}
+
+/* === CRT Scanline Overlay === */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  mix-blend-mode: overlay;
+  animation: flickerCRT 0.2s infinite;
+  z-index: 10;
+}
+
+@keyframes flickerCRT {
+  0%, 100% { opacity: 0.96; }
+  50% { opacity: 0.85; }
+}
+
+/* === Marquee === */
+.marquee {
+  color: #ff0000;
+  background: #111;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 6px;
+  border-bottom: 1px dashed #ff0000;
+}
+
+/* === ASCII Dividers === */
+.ascii-line {
+  text-align: center;
+  color: #ff0000;
+  font-size: 10px;
+  opacity: 0.6;
+  margin: 30px 0;
+}
+
+/* === Glitch + Flicker === */
+.glitch {
+  animation: glitch 1.5s infinite;
+  text-shadow: 1px 0 red, -1px 0 cyan;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: none; }
+  20% { transform: translate(-1px); }
+  40% { transform: translate(1px, 1px); }
+  60% { transform: translate(0, -1px); }
+  80% { transform: translate(-1px, 1px); }
+}
+
+.flicker {
+  animation: flicker 2.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 97%, 100% { opacity: 1; }
+  98% { opacity: 0; }
+}
+
+/* === Gallery === */
+.gallery-section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-in-out;
+}
+
+body:not(.no-transitions) .gallery-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.nm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+  justify-items: center;
+}
+
+.glitch-img {
+  width: 100%;
+  display: block;
+  filter: contrast(130%) brightness(90%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 10px #222;
+}
+
+.glitch-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(150%);
+}
+
+.enlarged {
+  transform: scale(2);
+  z-index: 1000;
+  position: relative;
+}
+
+.small-img {
+  width: 100px !important;
+  height: auto;
+}
+
+.gallery-desc {
+  font-style: italic;
+  color: #ccc;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #66ffff;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+
+/* === Audio Button === */
+#audio-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  font-family: monospace;
+  font-size: 20px;
+  background: #111;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#audio-btn:hover {
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+
+/* === GLITCHY IMAGE BORDERS === */
+.glitch-img {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+  animation: flicker-border 1.5s infinite alternate;
+  transition: transform 0.2s ease;
+}
+
+.glitch-img::before,
+.glitch-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  border: 4px solid;
+  mix-blend-mode: screen;
+  animation: glitch-border 0.6s infinite ease-in-out alternate;
+}
+
+.glitch-img::before {
+  border-color: red;
+  transform: translate(-2px, 2px);
+}
+
+.glitch-img::after {
+  border-color: cyan;
+  transform: translate(2px, -2px);
+}
+
+.glitch-img.enlarged {
+  transform: scale(1.3);
+  z-index: 10;
+}
+
+/* === GLITCH ANIMATIONS === */
+@keyframes glitch-border {
+  0%   { transform: translate(2px, -2px); }
+  20%  { transform: translate(-1px, 1px); }
+  40%  { transform: translate(1px, 0px); }
+  60%  { transform: translate(-2px, -1px); }
+  80%  { transform: translate(1px, 2px); }
+  100% { transform: translate(2px, -2px); }
+}
+
+@keyframes flicker-border {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* === Reflection Container === */
+.reflection-container {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto 4rem auto;
+  text-align: center;
+}
+
+.reflection-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  padding: 1rem;
+}
+
+/* === Mirror Effect for Reversed Text === */
+.mirror-effect {
+  color: #00ffcc;
+  background: #000;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
