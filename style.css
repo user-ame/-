@@ -169,7 +169,7 @@ body:not(.no-transitions) .gallery-section {
 .gallery-desc {
   font-style: italic;
   color: #ccc;
-  font-size: 11px;
+  font-size: 18px;
   text-align: center;
   line-height: 1.6;
 }
