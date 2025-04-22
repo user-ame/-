@@ -308,3 +308,29 @@ body:not(.no-transitions) .gallery-section {
   color: #ccc !important;
   font-size: 1.1rem !important;
 }
+
+/* Force visibility of digital reflection */
+#digital-reflection {
+  display: block !important;
+  opacity: 1 !important;
+  transform: none !important;
+  color: #00ffcc !important;
+  background: #111 !important;
+  font-size: 1.2rem !important;
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+.reflection-container {
+  display: block !important;
+  opacity: 1 !important;
+  transform: none !important;
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+.reflection-mirror {
+  display: block !important;
+  opacity: 0.3 !important;
+  transform: scaleY(-1) !important;
+}
