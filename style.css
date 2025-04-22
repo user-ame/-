@@ -73,10 +73,10 @@ h2 {
 
 /* === Marquee === */
 .marquee {
-  color: #ff66cc;
+  color: #ff0000;
   background: #111;
   font-family: monospace;
-  font-size: 12px;
+  font-size: 14px;
   padding: 6px;
   border-bottom: 1px dashed #ff66cc;
 }
