@@ -190,14 +190,14 @@ body:not(.no-transitions) .gallery-section {
   font-family: monospace;
   font-size: 20px;
   background: #111;
-  border: 1px solid #00ffcc;
+  border: 2px solid #00ffcc;
   color: #00ffcc;
   cursor: pointer;
   z-index: 100;
 }
 
 #audio-btn:hover {
-  box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
 }
 
 /* === GLITCHY IMAGE BORDERS === */
